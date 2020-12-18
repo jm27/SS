@@ -7,6 +7,9 @@ package com.ss.sf.assignments.day_four.test;
 import com.ss.sf.assignments.day_four.Line;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -17,25 +20,28 @@ import org.junit.Test;
 public class LineTest {
 
 	// New line instance
-	Line newLine = new Line(2, 2, 2, 2);
+	Line newLine = new Line(6, 2, 9, 4);
+	// Two lines for parallel test
+	Line newLine2 = new Line (3 ,4 ,2 ,4);
+	Line newLine3 = new Line (12 ,4 ,18 ,8);
 
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	public void getSlopeTest() {
-		// TODO Auto-generated method stub
-		assertEquals( 20, newLine.getSlope());
+		assertEquals( 0.6666666666666666, newLine.getSlope(), 0.0001);
+		assertNotEquals( 3, newLine.getSlope(), 0.0001);
 	}
 
 	@Test
 	public void getDistanceTest() {
-		// TODO Auto-generated method stub
-
+		assertEquals( 3.605551275463989, newLine.getDistance(), 0.0001);
+		assertNotEquals( 4, newLine.getDistance(), 0.0001);
 	}
 
 	@Test
 	public void parallelToTest() {
-		// TODO Auto-generated method stub
-
+		assertTrue(newLine.parallelTo(newLine3));
+		assertFalse(newLine.parallelTo(newLine2));
 	}
 
 }
