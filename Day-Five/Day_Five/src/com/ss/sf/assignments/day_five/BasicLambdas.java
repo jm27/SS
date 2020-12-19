@@ -36,10 +36,6 @@ public class BasicLambdas {
 		// Sort by words that contain letter "e"
 		Arrays.sort(words, Comparator.comparingInt(a -> (a.contains("E") || a.contains("e") ? 0 : 1)));
 		System.out.println(Arrays.toString(words));
-
-		// Sort by words that contain letter "e"
-		Arrays.sort(words, Comparator.comparingInt(a -> (a.contains("E") || a.contains("e") ? 0 : 1)));
-		System.out.println(Arrays.toString(words));
 	}
 
 }
