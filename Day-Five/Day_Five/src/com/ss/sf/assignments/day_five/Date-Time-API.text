@@ -1,7 +1,7 @@
 1) Which class would you use to store your birthday in years, months, days, seconds, and nanoseconds(YYYY/MM/DD/S/NS)?
 I would use the LocalDateTime Class. Example; LocalDateTime date = LocalDateTime.of(1991, 9, 9, 0, 0);
 2) Given a random date, how would you find the date of the previous Thursday?
-First get todays date using Localdate class then use TemporalAdjuster to modify the date and get the previous day of the wee that is equal to Thursday.
+First get todays date using Localdate class then use TemporalAdjuster to modify the date and get the previous day of the week that is equal to Thursday.
 3) What is the difference between a ZoneId and a ZoneOffset?
 ZoneId describes a time-zone identifier and provides rules for converting between an Instant and a LocalDateTime.
 ZoneOffset is a time-zone offset, which is the amount of time tipically in hours in which a timezone differs from UTC/Greenwich.
