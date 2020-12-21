@@ -18,6 +18,7 @@ public class RemoveX {
 	 */
 	public static void main(String[] args) {
 		// Create scanner for user input
+		RemoveX removeX = new RemoveX();
 		Scanner userInput = new Scanner(System.in);
 		List<String> listOfNums = new ArrayList<String>();
 		int list = 5;
@@ -29,7 +30,7 @@ public class RemoveX {
 			for (i = 0; i < list; i++) {
 				listOfNums.add(userInput.next());
 			}
-			listOfNums.forEach(s -> System.out.println(noX(s)));
+			listOfNums.forEach(s -> System.out.println(removeX.noX(s)));
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -38,7 +39,7 @@ public class RemoveX {
 	}
 
 	// Replace method on string
-	public static String noX(String phrase) {
+	public String noX(String phrase) {
 		return phrase.replace("x", "");
 	}
 
