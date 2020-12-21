@@ -49,7 +49,7 @@ public class SampleSingleton {
 			Statement st = conn.createStatement();
 			ResultSet rs = st.executeQuery("Select id from table");
 			// Change x to big decimal
-			BigDecimal x;
+			BigDecimal x = null;
 			while (rs.next()) {
 				try {
 					x = input.multiply(new BigDecimal(rs.getInt(1)));
@@ -58,6 +58,7 @@ public class SampleSingleton {
 					e.printStackTrace();
 				}
 			}
+			System.out.println(x);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
